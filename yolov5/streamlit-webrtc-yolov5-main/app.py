@@ -11,14 +11,6 @@ import av
 import queue
 from typing import List, NamedTuple
 import torch
-from models.common import DetectMultiBackend
-from utils.dataloaders import IMG_FORMATS, VID_FORMATS, LoadImages, LoadScreenshots, LoadStreams
-from utils.general import (LOGGER, Profile, check_file, check_img_size, check_imshow, check_requirements, colorstr, cv2,
-                           increment_path, non_max_suppression, print_args, scale_boxes, strip_optimizer, xyxy2xywh)
-from utils.plots import Annotator, colors, save_one_box,save_one_box2
-from utils.torch_utils import select_device, smart_inference_mode
-
-
 
 WEBRTC_CLIENT_SETTINGS = ClientSettings(
     rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]},
@@ -27,9 +19,9 @@ WEBRTC_CLIENT_SETTINGS = ClientSettings(
 
 # Official Model
 # MODEL = torch.hub.load('ultralytics/yolov5', 'yolov5s')
-MODEL = DetectMultiBackend(weights, device=device, dnn=dnn, data=data, fp16=half)
-stride, names, pt = model.stride, model.names, model.pt
-MODEL.warmup(imgsz=(1 if pt or model.triton else bs, 3, *imgsz))  # warmup
+# MODEL = DetectMultiBackend(weights, device=device, dnn=dnn, data=data, fp16=half)
+# stride, names, pt = model.stride, model.names, model.pt
+# MODEL.warmup(imgsz=(1 if pt or model.triton else bs, 3, *imgsz))  # warmup
 
 # Custom Model
 # MODEL = torch.hub.load('ultralytics/yolov5', 'custom', path='/home/ubuntu/yolov5/best.pt')
