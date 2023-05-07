@@ -24,7 +24,7 @@ WEBRTC_CLIENT_SETTINGS = ClientSettings(
 # MODEL.warmup(imgsz=(1 if pt or model.triton else bs, 3, *imgsz))  # warmup
 
 # Custom Model
-# MODEL = torch.hub.load('ultralytics/yolov5', 'custom', path='/home/ubuntu/yolov5/best.pt')
+MODEL = torch.hub.load('ultralytics/yolov5', 'custom', path='/home/ubuntu/yolov5/best.pt')
 
 def main():
     """Object detection demo with PyTorch
