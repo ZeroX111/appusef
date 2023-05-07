@@ -28,7 +28,7 @@ WEBRTC_CLIENT_SETTINGS = ClientSettings(     # webrtc_streamer配置
 
 # Custom Model
 # MODEL = torch.hub.load('ultralytics/yolov5', 'custom', path='/home/ubuntu/yolov5/best.pt')
-weights='./yolov5.pt'  # model path or triton URL
+weights='./yolov5s.pt'  # model path or triton URL
 device = select_device('')
 imgsz=(640, 640)
 
